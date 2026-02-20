@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokémon Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body id="body"
+  class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-400 via-purple-400 to-pink-400 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-500">
+
+  <div class="w-full max-w-md p-6">
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex justify-end mb-4">
+      <button id="toggleDark"
+        class="px-3 py-1 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">
+        🌙 Toggle Dark
+      </button>
+    </div>
+
+    <!-- Main Card -->
+    <div class="bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 transition-all duration-500">
+
+      <h1 class="text-3xl font-bold text-center mb-6 text-gray-800 dark:text-white">
+        Pokémon Finder
+      </h1>
+
+      <!-- Search Section -->
+      <div class="flex gap-2 mb-4">
+        <input id="pokemonInput" type="text"
+          placeholder="Enter Pokémon name or ID"
+          class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white" />
+
+        <button id="searchBtn"
+          class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition disabled:opacity-50 disabled:cursor-not-allowed">
+          Search
+        </button>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div id="loading" class="hidden flex justify-center my-4">
+        <div class="w-8 h-8 border-4 border-indigo-600 border-dashed rounded-full animate-spin"></div>
+      </div>
+
+      <!-- Error Message -->
+      <div id="error" class="text-red-500 text-center mb-4 hidden"></div>
+
+      <!-- Pokémon Card -->
+      <div id="pokemonCard" class="mt-4"></div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
